@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Bảo Hộ Lao Động (VĂN DŨNG)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="./image/logo.png" alt="Logo" />
+    <div class="logo-text">
+      <strong>ĐỒNG PHỤC NGÀY MỚI</strong><br />
+      <span>BẢO HỘ LAO ĐỘNG</span>
+    </div>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#">TRANG CHỦ</a></li>
+    <li><a href="#">GIỚI THIỆU</a></li>
+    
+    <li class="dropdown">
+      <a href="#">ÁO ĐỒNG PHỤC CÔNG TY <i class="fas fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Áo thun</a></li>
+        <li><a href="#">Áo sơ mi</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">BỘ ĐỒNG PHỤC CÔNG SỞ <i class="fas fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Nam</a></li>
+        <li><a href="#">Nữ</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#" class="active">BẢO HỘ LAO ĐỘNG</a></li>
+
+    <li class="dropdown">
+      <a href="#">TIN TỨC <i class="fas fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Sự kiện</a></li>
+        <li><a href="#">Bài viết</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="icons">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-shopping-bag"></i>
+  </div>
+</nav>
+
+<!-- Slider -->
+<div class="slider">
+    <div class="slides">
+      <div class="slide active"><img src="/image/slide1.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="/image/slide2.jpg" alt="Slide 2"></div>
+      <div class="slide"><img src="/image/slide3.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="/image/slide4.jpg" alt="Slide 4"></div>
+      <div class="slide"><img src="/image/slide5.jpg" alt="Slide 5"></div>
+    </div>
+    <div class="dots">
+      <span class="dot active" onclick="showSlide(0)"></span>
+      <span class="dot" onclick="showSlide(1)"></span>
+      <span class="dot" onclick="showSlide(2)"></span>
+      <span class="dot" onclick="showSlide(3)"></span>
+      <span class="dot" onclick="showSlide(4)"></span>
+    </div>
+  </div>
+  
+<!-- SẢN PHẨM MỚI -->
+<h2 style="text-align: center; margin: 40px 0 20px; font-size: 28px;">SẢN PHẨM MỚI</h2>
+<div class="product-list">
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/sp1.jpg" alt="SP1">
+    <h3>Mẫu Áo Thun Team Building Đồng Phục Ngân Hàng Vpbank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/sp2.jpg" alt="SP2">
+    <h3>Áo Team Building đồng phục ngân hàng TPbank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/sp3.jpg" alt="SP3">
+    <h3>Mẫu áo Team Building đồng phục ngân hàng MB</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/sp4.jpg" alt="SP4">
+    <h3>Mẫu Áo Team Building Ngân Hàng Techcombank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+</div>
+
+<!-- ÁO POLO DOANH NGHIỆP -->
+<h2 style="text-align: center; margin: 40px 0 20px; font-size: 28px;">ÁO POLO DOANH NGHIỆP</h2>
+<div class="polo-section">
+  <div class="product-card">
+    <div class="discount">26%<br>Giảm</div>
+    <img src="image/sp1.jpg" alt="Polo 1">
+    <h3>Mẫu Áo Polo Đồng Phục Công Ty Màu Xanh Trắng Boeing</h3>
+    <p>Giá SP : <span class="old-price">189.000 ₫</span> <span class="new-price">139.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">17%<br>Giảm</div>
+    <img src="image/sp2.jpg" alt="Polo 2">
+    <h3>Mẫu Áo Polo Đồng Phục Ngân Hàng BIDV Màu Trắng Phối Xanh</h3>
+    <p>Giá SP : <span class="old-price">315.000 ₫</span> <span class="new-price">260.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">26%<br>Giảm</div>
+    <img src="image/sp3.jpg" alt="Polo 3">
+    <h3>Mẫu Áo Polo Đồng Phục Công Ty JBL Màu Vàng Pha Phối</h3>
+    <p>Giá SP : <span class="old-price">189.000 ₫</span> <span class="new-price">139.000 ₫</span></p>
+  </div>
+</div>
+
+
+<!-- MẪU ÁO ĐỒNG PHỤC CÔNG TY ĐẸP-->
+<h2 style="text-align: center; margin: 40px 0 20px; font-size: 28px;">SẢN PHẨM MỚI</h2>
+<div class="product-list">
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty1.jpg" alt="SP1">
+    <h3>Mẫu Áo Thun Team Building Đồng Phục Ngân Hàng Vpbank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty2.jpg" alt="SP2">
+    <h3>Áo Team Building đồng phục ngân hàng TPbank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty3.jpg" alt="SP3">
+    <h3>Mẫu áo Team Building đồng phục ngân hàng MB</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty4.jpg" alt="SP4">
+    <h3>Mẫu Áo Team Building Ngân Hàng Techcombank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+</div>
+ 
+<h2 style="text-align: center; margin: 40px 0 20px; font-size: 28px;">THÔNG TIN VỀ ĐỒNG PHỤC CÔNG TY</h2>
+
+<div class="info-section">
+  <div class="info-card">
+    <img src="image/TTCTY1.jpg" alt="Thông tin 1">
+    <h3>Top 10+ Mẫu Đồng Phục Công Ty Đẹp Nhất, Tạo Ấn Tượng Với Khách Hàng</h3>
+    <p>Lựa chọn thiết kế đồng phục độc đáo và đơn vị đặt may đồ uy tín là một trong những vấn đề nhiều công ty, doanh nghiệp quan tâm và cân nhắc. Ở bài viết…</p>
+  </div>
+
+  <div class="info-card">
+    <img src="image/TTCTY2.jpg"Thông tin 2">
+    <h3>Địa Chỉ May Áo Thun Đồng Phục Công Ty Giá Rẻ Tại Hà Nội</h3>
+    <p>Áo thun hiện nay đã trở thành một phần không thể thiếu của tất cả mọi người, đặc biệt phải kể đến các mẫu áo ứng dụng trong may đồng phục công ty. Các mẫu…</p>
+  </div>
+
+  <div class="info-card">
+    <img src="image/TTCTY3.jpg" alt="Thông tin 3">
+    <h3>100+ Mẫu Đồng Phục Đi Biển Cho Công Ty Độc Đáo Cho Doanh Nghiệp</h3>
+    <p>Một chuyến du lịch biển cùng đồng nghiệp hứa hẹn bao điều thú vị và kỷ niệm khó quên. Những lúc này, đồng phục đi biển cho công ty, tập thể hay nhóm sẽ là…</p>
+  </div>
+</div>
+<!-- tin tuc 2 -->
+<h2 style="text-align: center; margin: 40px 0 20px; font-size: 28px;">SẢN PHẨM MỚI</h2>
+<div class="product-list">
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty1.jpg" alt="SP1">
+    <h3>Mẫu Áo Thun Team Building Đồng Phục Ngân Hàng Vpbank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty2.jpg" alt="SP2">
+    <h3>Áo Team Building đồng phục ngân hàng TPbank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty3.jpg" alt="SP3">
+    <h3>Mẫu áo Team Building đồng phục ngân hàng MB</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+
+  <div class="product-card">
+    <div class="discount">29%<br>Giảm</div>
+    <img src="image/cty4.jpg" alt="SP4">
+    <h3>Mẫu Áo Team Building Ngân Hàng Techcombank</h3>
+    <p>Giá SP : <span class="old-price">139.000 ₫</span> <span class="new-price">99.000 ₫</span></p>
+  </div>
+</div>
+ 
+<h2 style="text-align: center; margin: 40px 0 20px; font-size: 28px;">Bài Viết mới nhất</h2>
+
+<div class="info-section">
+  <div class="info-card">
+    <img src="image/BVMN1.jpg" alt="Thông tin 1">
+    <h3>Top 10+ Mẫu Đồng Phục Công Ty Đẹp Nhất, Tạo Ấn Tượng Với Khách Hàng</h3>
+    <p>Lựa chọn thiết kế đồng phục độc đáo và đơn vị đặt may đồ uy tín là một trong những vấn đề nhiều công ty, doanh nghiệp quan tâm và cân nhắc. Ở bài viết…</p>
+  </div>
+
+  <div class="info-card">
+    <img src="image/BVMN2.jpg"Thông tin 2">
+    <h3>Địa Chỉ May Áo Thun Đồng Phục Công Ty Giá Rẻ Tại Hà Nội</h3>
+    <p>Áo thun hiện nay đã trở thành một phần không thể thiếu của tất cả mọi người, đặc biệt phải kể đến các mẫu áo ứng dụng trong may đồng phục công ty. Các mẫu…</p>
+  </div>
+
+  <div class="info-card">
+    <img src="image/BVMN3.jpg" alt="Thông tin 3">
+    <h3>100+ Mẫu Đồng Phục Đi Biển Cho Công Ty Độc Đáo Cho Doanh Nghiệp</h3>
+    <p>Một chuyến du lịch biển cùng đồng nghiệp hứa hẹn bao điều thú vị và kỷ niệm khó quên. Những lúc này, đồng phục đi biển cho công ty, tập thể hay nhóm sẽ là…</p>
+  </div>
+</div>
+
+
+
+
+<script>
+  document.getElementById("menu-toggle").onclick = function () {
+    document.getElementById("nav-links").classList.toggle("active");
+  };
+</script>
+
+<script src="slide.js"></script>
+
+</body>
+</html>
