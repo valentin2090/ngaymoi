@@ -74,3 +74,21 @@ function manualSlide(direction) {
   if (currentOffset > maxScroll) currentOffset = maxScroll;
   slider.style.transform = `translateX(-${currentOffset}px)`;
 }
+
+// nút back to top
+
+// Hiển thị nút khi cuộn xuống
+window.onscroll = function() {
+  const btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Cuộn mượt lên đầu trang
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
