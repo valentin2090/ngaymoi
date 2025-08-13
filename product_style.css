@@ -4,13 +4,20 @@
     border-radius: 5px;
 }
 .thumbnail img {
-    width: 70px;
+    width: 80px;        /* Chiều rộng cố định */
+    height: 80px;       /* Chiều cao cố định */
+    object-fit: cover;  /* Cắt ảnh để vừa khung mà không méo */
+    border: 1px solid #ddd;
+    border-radius: 6px;
     cursor: pointer;
-    border: 2px solid transparent;
+    transition: transform 0.2s ease;
 }
+
 .thumbnail img:hover {
-    border: 2px solid #007bff;
+    transform: scale(1.05); /* Zoom nhẹ khi hover */
+    border-color: #999;
 }
+
 .discount-badge {
     position: absolute;
     top: 10px;
