@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+    .form-container h2 { margin-bottom: 20px; }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .form-container button:hover { background: #1e7e34; }
+    .error { color: red; font-size: 14px; text-align: left; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Đăng ký</h2>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Tên đăng nhập">
+      <div id="usernameError" class="error"></div>
+
+      <input type="email" id="email" placeholder="Email">
+      <div id="emailError" class="error"></div>
+
+      <input type="password" id="password" placeholder="Mật khẩu">
+      <div id="passwordError" class="error"></div>
+
+      <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+      <div id="confirmPasswordError" class="error"></div>
+
+      <button type="submit">Đăng ký</button>
+    </form>
+    <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let valid = true;
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      document.getElementById("usernameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("passwordError").textContent = "";
+      document.getElementById("confirmPasswordError").textContent = "";
+
+      // Validate
+      if (username === "") {
+        document.getElementById("usernameError").textContent = "Tên đăng nhập không được để trống";
+        valid = false;
+      }
+
+      const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email === "") {
+        document.getElementById("emailError").textContent = "Email không được để trống";
+        valid = false;
+      } else if (!emailRegex.test(email)) {
+        document.getElementById("emailError").textContent = "Email không hợp lệ";
+        valid = false;
+      }
+
+      if (password.length < 6) {
+        document.getElementById("passwordError").textContent = "Mật khẩu phải ít nhất 6 ký tự";
+        valid = false;
+      }
+
+      if (confirmPassword !== password) {
+        document.getElementById("confirmPasswordError").textContent = "Mật khẩu nhập lại không khớp";
+        valid = false;
+      }
+
+      if (valid) {
+        // Lấy danh sách users từ localStorage (nếu có)
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Kiểm tra trùng username
+        const userExists = users.find(u => u.username === username);
+        if (userExists) {
+          alert("Tên đăng nhập đã tồn tại!");
+          return;
+        }
+
+        // Thêm user mới
+        users.push({ username, email, password });
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Đăng ký thành công! Hãy đăng nhập.");
+        window.location.href = "login.html"; // chuyển sang trang login
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,85 +1,205 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chi tiết sản phẩm</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm day thung</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../product_style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">BHLĐ</div>
-    <div class="search-cart">
-      <input type="text" placeholder="Tìm kiếm sản phẩm...">
-      <button>🛒</button>
-    </div>
-  </nav>
 
-  <!-- Chi tiết sản phẩm -->
-  <section class="product-detail">
-    <div class="product-image">
-      <div class="slider">
-        <div class="slides" id="slides">
-          <img src="image/cty1.jpg" alt="Ảnh 1">
-          <img src="image/cty2.jpg" alt="Ảnh 2">
-          <img src="image/cty3.jpg" alt="Ảnh 3">
-        </div>
-        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+<body class="bg-light">
+  <!-- menu -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="../home.html"><img src="../image/logo.png" alt="Logo" /></a>
+      <div class="logo-text">
+        <strong>ĐỒNG PHỤC NGÀY MỚI</strong><br />
+        <span>BẢO HỘ LAO ĐỘNG</span>
       </div>
     </div>
-    <div class="product-info">
-      <h2>Mẫu Mũ-găng tay</h2>
-      <p class="product-price">Giá: <span>139.000₫</span></p>
-      <p class="product-desc">
-        Mẫu áo Polo đồng phục cao cấp, chất liệu cotton co giãn thoáng mát, phù hợp cho công ty, team building, sự kiện.
-      </p>
-      <a href="https://zalo.me/0934997446" class="buy-btn">Liên hệ</a>
-      <ul class="product-details">
-        <li>✔️ Chất liệu: Cotton cao cấp</li>
-        <li>✔️ Màu sắc: Xanh navy, phối trắng</li>
-        <li>✔️ Size: S, M, L, XL, 2XL</li>
-        <li>✔️ In/thêu logo theo yêu cầu</li>
-      </ul>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Bảo hộ lao động ngày mới - All rights reserved.</p>
-    <div class="contact-info">
-      <h3>Thông tin liên hệ</h3>
-      <p>📍 Địa chỉ: 332 Ông Ích Khiêm, Phường Thạc Gián, Quận Thanh Khê, Thành phố Đà Nẵng.</p>
-      <p>📞 Hotline: 0932 441 886</p>
-      <p>✉️ Email: bhldngaymoi@gmail.com</p>
+    <ul class="nav-links" id="nav-links">
+      <li class="dropdown">
+        <a href="produc_link/product_daythung.html">DÂY THỪNG <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Dây gai</a></li>
+          <li><a href="#">Dây đây(gai)</a></li>
+          <li><a href="#">Dây thừng tơi</a></li>
+          <li><a href="#">Dây tơ</a></li>
+          <li><a href="#">Dây thai</a></li>
+          <li><a href="#">Dây con rít</a></li>
+          <li><a href="#">Dây cường lực</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="product_luoi.html">LƯỚI <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Lưới bao che công trình</a></li>
+          <li><a href="#">Lưới chống vật rơi</a></li>
+          <li><a href="#">Lưới che Lan - Dàn Bầu</a></li>
+          <li><a href="#">Lưới che nắng</a></li>
+          <li><a href="#">Lưới nhựa</a></li>
+
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="product_dongphuclaodong.html">ĐỒNG PHỤC LAO ĐỘNG <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Áo bảo hộ</a></li>
+          <li><a href="#">Áo KaKi</a></li>
+
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="product_detail.html">Bạt <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Bạt xanh cam</a></li>
+          <li><a href="#">Bạt xanh</a></li>
+          <li><a href="#">Bạt sọc</a></li>
+          <li><a href="#">Bạt HDBE</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="product_mu_gangtay.html">MŨ - GĂNG TAY <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Mũ bảo hộ</a></li>
+          <li><a href="#">Dây an toàn</a></li>
+          <li><a href="#">Găng tay</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="./product_vaidiachat.html">VẢI ĐỊA KỸ THUẬT <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Màng PVC</a></li>
+          <li><a href="#">Màng Nilon đen </a></li>
+          <li><a href="#">Màng Nilon trắng </a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-bag"></i>
     </div>
-  </footer>
 
-  <script>
-    document.querySelector('.buy-btn').addEventListener('click', () => {
-      alert("Sản phẩm đã được thêm vào giỏ hàng!");
-    });
+    <!-- login and register -->
+    <div class="auth-links">
+      <a href="login.html">Đăng nhập</a> | 
+      <a href="register.html">Đăng ký</a>
+    </div>
+  </nav>
+  <!-- end -->
+  <div class="container py-4">
+    <div class="row g-4">
+      <!-- Hình sản phẩm -->
+      <div class="col-md-6">
+        <div class="position-relative product-gallery">
+          <img src="../image/sp10.jpg" alt="Sản phẩm chính" class="img-fluid">
+          <span class="discount-badge">29% Giảm</span>
+        </div>
+        <div class="d-flex gap-2 mt-2 thumbnail">
+          <img src="./image/gtbh.jpg" alt="">
+          <img src="./image/gtbh1.jpg" alt="">
+          <img src="./image/gtbh2.jpg" alt="">
+          <img src="./image/mbh.jpg" alt="">
+          <img src="./image/mbh1.jpg" alt="">
+          <img src="./image/sp14.jpg" alt="">
+          <img src="./image/sp16.jpg" alt="">
+        </div>
+      </div>
 
-    let slideIndex = 0;
-    const slides = document.getElementById("slides");
-    const totalSlides = slides.children.length;
+      <!-- Thông tin sản phẩm -->
+      <div class="col-md-6 product-text">
+        <h4>Dây thừng trang trí, size 14mm,16mm,18mm, 20mm, dây đay, làm xích đu, handmade, decor</h4>
+        <p>
+          <span class="price-old">24.000 ₫</span>
+          <span class="price-new">8.800 ₫</span>
+        </p>
+        <p class="text-muted">Danh mục: Dây thừng</p>
 
-    function showSlide() {
-      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-    }
+        <ul class="product-info list-unstyled">
+          <li>1. Cam kết giá rẻ nhất thị trường</li>
+          <li>2. Sản xuất tại Việt Nam, chất lượng đảm bảo</li>
+          <li>3. Miễn phí vận chuyển với số lượng trên 20 cái</li>
+          <li>4. Hỗ trợ nhiều phương thức thanh toán: tiền mặt, chuyển khoản...</li>
+        </ul>
 
-    function plusSlides(n) {
-      slideIndex += n;
-      if (slideIndex >= totalSlides) slideIndex = 0;
-      if (slideIndex < 0) slideIndex = totalSlides - 1;
-      showSlide();
-    }
+        <div class="d-flex gap-2 mt-3">
+          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+          <button class="btn btn-danger">Mua ngay</button>
+        </div>
+      </div>
+    </div>
 
-    setInterval(() => {
-      plusSlides(1);
-    }, 4000); // Tự động chuyển slide mỗi 4 giây
-  </script>
+    <!-- Thông tin sản phẩm & Bài viết liên quan -->
+    <div class="row mt-4">
+      <div class="col-md-8">
+        <h5 class="mb-3">THÔNG TIN SẢN PHẨM</h5>
+        <table class="table table-bordered">
+          <tr>
+            <th>Mã sản phẩm</th>
+            <td>DT001</td>
+          </tr>
+          <tr>
+            <th>Chất liệu</th>
+            <td>Cây Đay</td>
+          </tr>
+          <tr>
+            <th>Màu sắc</th>
+            <td>Nâu - Be</td>
+          </tr>
+          <tr>
+            <th>Kiểu dáng</th>
+            <td>Shop có dây thừng đủ size từ 1mm~40mm</td>
+          </tr>
+          <tr>
+            <th>Các kích thước</th>
+            <td>Dây thừng trang trí, dây thừng, dây đay 12mm, 14mm, 16mm, 18mm...</td>
+          </tr>
+          <tr>
+            <th>Thương hiệu</th>
+            <td>Made In Việt Nam</td>
+          </tr>
+          <tr>
+            <th>Danh mục</th>
+            <td>Dây thừng trang trí,dây đay làm đồ cào móng mèo, trang trí shop, nhà cửa</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="col-md-4">
+        <h5 class="mb-3">BÀI VIẾT LIÊN QUAN</h5>
+        <div class="related-posts d-flex mb-3">
+          <img src="../image/sp1.jpg" alt="">
+          <a href="#" class="text-decoration-none">Dây thừng chất lượng cao, giá cả hợp lý, nhập hàng tận
+            xưởng số lượng lớn.Giá Rẻ</a>
+        </div>
+        <div class="related-posts d-flex mb-3">
+          <img src="../image/sp2.jpg" alt="">
+          <a href="#" class="text-decoration-none">Đã nhận được hàng đúng kích thước chất lượng tốt mua của
+            shop 50m r á</a>
+        </div>
+        <div class="related-posts d-flex mb-3">
+          <img src="../image/sp3.jpg" alt="">
+          <a href="#" class="text-decoration-none">Top Xưởng May Đồng Phục Giá Rẻ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>

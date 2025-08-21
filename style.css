@@ -594,4 +594,18 @@ body {
     .contact-info p {
       margin: 5px 0;
     }
- 
+ /* login */
+ .auth-links {
+  margin-left: 15px;
+}
+
+.auth-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+.auth-links a:hover {
+  color: #007bff;
+}

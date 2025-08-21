@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+    .form-container h2 { margin-bottom: 20px; }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .form-container button:hover { background: #0056b3; }
+    .error { color: red; font-size: 14px; margin-bottom: 6px; text-align: left; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Đăng nhập</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Tên đăng nhập">
+      <div id="usernameError" class="error"></div>
+
+      <input type="password" id="password" placeholder="Mật khẩu">
+      <div id="passwordError" class="error"></div>
+
+      <button type="submit">Đăng nhập</button>
+    </form>
+    <p>Chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+
+      document.getElementById("usernameError").textContent = "";
+      document.getElementById("passwordError").textContent = "";
+
+      if (username === "") {
+        document.getElementById("usernameError").textContent = "Vui lòng nhập tên đăng nhập";
+        return;
+      }
+      if (password === "") {
+        document.getElementById("passwordError").textContent = "Vui lòng nhập mật khẩu";
+        return;
+      }
+
+      // Lấy danh sách users từ localStorage
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      const user = users.find(u => u.username === username && u.password === password);
+
+      if (user) {
+        alert("Đăng nhập thành công! Xin chào " + username);
+        // Lưu trạng thái đăng nhập
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        // Chuyển hướng sang trang chủ
+        window.location.href = "home.html";
+      } else {
+        alert("Sai tên đăng nhập hoặc mật khẩu!");
+      }
+    });
+  </script>
+</body>
+</html>
